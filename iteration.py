@@ -1,151 +1,167 @@
 # ==============================================================================
-# ACTIVITY 1: Simple Counting Loops
+# ACTIVITY 1: Basic For Loops with Range
 # ==============================================================================
 
-# Basic counting function
-def count_to_number(n):
-    result = []
+# Count up to a number
+def count_up(n):
     for i in range(1, n + 1):
-        result.append(i)
-    return result
+        print(i)
 
 # Count backwards - MODIFY this function
-def count_down_from_number(n):
-    result = []
-    # TODO: Change the range parameters to count down
-    for i in range(1, n + 1):  # This needs fixing!
-        result.append(i)
-    return result
+def count_down():
+    # TODO: Fix this to count from 5 down to 1
+    for i in range(1, 6):  # This counts up, not down!
+        print(i)
 
-# MAKE: Create a times table function
-def times_table(number, up_to):
-    # TODO: Complete this function
+# MAKE: Print multiples of a number
+def print_multiples(number):
+    # TODO: Print the first 5 multiples of 'number'
+    # Example: print_multiples(3) should print 3, 6, 9, 12, 15
     pass
 
 # ==============================================================================
-# ACTIVITY 2: Working with Lists
+# ACTIVITY 2: For Loops with Variables
 # ==============================================================================
 
-# Sum all numbers in a list
-def sum_numbers(numbers):
+# Add up numbers from 1 to n
+def add_up_to_n(n):
     total = 0
-    for num in numbers:
-        total += num
+    for i in range(1, n + 1):
+        total = total + i
     return total
 
-# Find the largest number - MODIFY this function
-def find_largest(numbers):
-    if not numbers:
-        return None
-    largest = 0  # This might not work for all cases!
-    for num in numbers:
-        if num > largest:
-            largest = num
-    return largest
+# Multiply numbers - MODIFY this function
+def multiply_up_to_n(n):
+    product = 1
+    for i in range(1, n + 1):
+        # TODO: Fix this line to multiply instead of just assigning
+        product = i  # This doesn't multiply!
+    return product
 
-# MAKE: Count how many even numbers are in a list
-def count_evens(numbers):
-    # TODO: Complete this function
+# MAKE: Add numbers counting backwards
+def count_down_from(n):
+    # TODO: Add up n + (n-1) + (n-2) + ... + 1
+    # Example: count_down_from(4) should return 4+3+2+1 = 10
     pass
 
 # ==============================================================================
-# ACTIVITY 3: Simple String Processing
+# ACTIVITY 3: For Loops with Simple Conditions
 # ==============================================================================
 
-# Count vowels in a word
-def count_vowels(word):
-    vowels = "aeiou"
+# Count even numbers up to n
+def count_evens_up_to(n):
     count = 0
-    for letter in word.lower():
-        if letter in vowels:
-            count += 1
+    for i in range(1, n + 1):
+        if i % 2 == 0:  # % finds the remainder when dividing
+            count = count + 1
     return count
 
-# Reverse a string - MODIFY this function
-def reverse_string(text):
-    result = ""
-    # TODO: Use a loop to build the reversed string
-    for char in text:
-        result = result + char  # This won't reverse!
-    return result
+# Count odd numbers - MODIFY this function
+def count_odds_up_to(n):
+    count = 0
+    for i in range(1, n + 1):
+        if i % 2 == 0:  # This condition is wrong for odd numbers!
+            count = count + 1
+    return count
 
-# MAKE: Count words in a sentence
-def count_words(sentence):
-    # TODO: Complete this function
+# MAKE: Count numbers divisible by 5
+def count_fives(n):
+    # TODO: Count how many numbers from 1 to n are divisible by 5
+    # Hint: Use % like in the even number example
     pass
 
 # ==============================================================================
-# ACTIVITY 4: Basic Nested Loops
-# ==============================================================================
-
-# Create a simple multiplication table
-def multiplication_table(size):
-    for i in range(1, size + 1):
-        row = []
-        for j in range(1, size + 1):
-            row.append(i * j)
-        print(row)
-
-# Find pairs that add to target - MODIFY this function
-def find_pairs_that_sum(numbers, target):
-    pairs = []
-    for i in range(len(numbers)):
-        for j in range(len(numbers)):  # This will find duplicates!
-            if numbers[i] + numbers[j] == target:
-                pairs.append((numbers[i], numbers[j]))
-    return pairs
-
-# MAKE: Create a pattern printer
-def print_triangle(height):
-    # TODO: Complete this function to print a triangle of stars
-    pass
-
-# ==============================================================================
-# ACTIVITY 5: Basic While Loops
+# ACTIVITY 4: Basic While Loops
 # ==============================================================================
 
 # Count down using while loop
-def countdown_while(start):
-    current = start
-    result = []
+def countdown_while(n):
+    current = n
     while current > 0:
-        result.append(current)
-        current -= 1
-    return result
+        print(current)
+        current = current - 1
 
-# Keep asking for input until valid - MODIFY this function
-def get_positive_number():
-    number = -1
-    while number <= 0:  # This condition needs fixing!
-        number = int(input("Enter a positive number: "))
-    return number
+# Count up with while - MODIFY this function
+def count_up_while(n):
+    current = 1
+    while current <= n:
+        print(current)
+        # TODO: Add the missing line to avoid infinite loop!
+        pass
 
-# MAKE: Create a guessing game function
-def simple_guessing_game(target):
-    # TODO: Complete this function
-    # Keep asking for guesses until correct
-    # Return the number of attempts
+# MAKE: Add numbers until target reached
+def add_until_target(target):
+    # TODO: Keep adding 1, then 2, then 3, etc. until total >= target
+    # Return how many numbers you added
+    # Example: If target is 10, add 1+2+3+4 = 10, so return 4
+    pass
+
+# ==============================================================================
+# ACTIVITY 5: Nested Loops (Simple Patterns)
+# ==============================================================================
+
+# Print a square of stars
+def print_square(size):
+    for row in range(size):
+        for col in range(size):
+            print("*", end="")
+        print()  # New line after each row
+
+# Print a rectangle - MODIFY this function
+def print_rectangle(width, height):
+    for row in range(height):
+        for col in range(width):
+            print("*", end="")
+        print()  # This works but let's make sure you understand it
+
+# MAKE: Print a right triangle
+def print_right_triangle(height):
+    # TODO: Print a triangle like this for height=4:
+    # *
+    # **
+    # ***
+    # ****
     pass
 
 # ==============================================================================
 # EXTENSION CHALLENGES
 # ==============================================================================
 
-# Challenge 1: Find the longest word
-def find_longest_word(sentence):
-    words = sentence.split()
-    longest = ""
-    for word in words:
-        if len(word) > len(longest):
-            longest = word
-    return longest
-
-# Challenge 2: Calculate average of a list
-def calculate_average(numbers):
-    # TODO: Complete this function
+# Challenge 1: Print multiples of 3 from 1 to 20
+def print_multiples_of_three():
+    # TODO: Use a loop to print 3, 6, 9, 12, 15, 18
     pass
 
-# Challenge 3: Remove duplicates from a list
-def remove_duplicates(items):
-    # TODO: Complete this function
+# Challenge 2: Find first number whose square > 100
+def find_first_square_over_100():
+    # TODO: Use a while loop to find the answer
+    # Test: 1*1=1, 2*2=4, 3*3=9, ... 10*10=100, 11*11=121
     pass
+
+# Challenge 3: Print one times table
+def print_times_table(number):
+    # TODO: Print number x 1, number x 2, etc. up to number x 10
+    # Example: print_times_table(7) prints "7 x 1 = 7", "7 x 2 = 14", etc.
+    pass
+
+# ==============================================================================
+# TEST YOUR FUNCTIONS
+# ==============================================================================
+
+if __name__ == "__main__":
+    print("Testing count_up(3):")
+    count_up(3)
+    
+    print("\nTesting add_up_to_n(4):")
+    result = add_up_to_n(4)
+    print(f"Result: {result}")
+    
+    print("\nTesting count_evens_up_to(6):")
+    result = count_evens_up_to(6)
+    print(f"Even numbers from 1 to 6: {result}")
+    
+    print("\nTesting countdown_while(3):")
+    countdown_while(3)
+    
+    print("\nTesting print_square(3):")
+    print_square(3)
