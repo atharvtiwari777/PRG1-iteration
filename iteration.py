@@ -65,7 +65,7 @@ def count_evens_up_to(n):
 def count_odds_up_to(n):
     count = 0
     for i in range(1, n + 1):
-        if i % 2 == 0:  # This condition is wrong for odd numbers!
+        if i % 2 == 1:  # This condition is wrong for odd numbers!
             count = count + 1
     return count
 
@@ -73,7 +73,10 @@ def count_odds_up_to(n):
 def count_fives(n):
     # TODO: Count how many numbers from 1 to n are divisible by 5
     # Hint: Use % like in the even number example
-    pass
+    for i in range(1, n + 1):
+        if i % 5 == 0:
+            count = count + 1
+    
 
 # ==============================================================================
 # ACTIVITY 4: Basic While Loops
@@ -170,5 +173,3 @@ def print_times_table(number):
     
 #     print("\nTesting print_square(3):")
 #     print_square(3)
-
-print(count_down_from(4))
