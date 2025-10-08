@@ -37,14 +37,17 @@ def multiply_up_to_n(n):
     product = 1
     for i in range(1, n + 1):
         # TODO: Fix this line to multiply instead of just assigning
-        product = i  # This doesn't multiply!
+        product *= i  # This doesn't multiply!
     return product
 
 # MAKE: Add numbers counting backwards
 def count_down_from(n):
     # TODO: Add up n + (n-1) + (n-2) + ... + 1
     # Example: count_down_from(4) should return 4+3+2+1 = 10
-    pass
+    total = 0
+    for i in range(n, 0, -1):
+        total += i
+    return total
 
 # ==============================================================================
 # ACTIVITY 3: For Loops with Simple Conditions
@@ -168,4 +171,4 @@ def print_times_table(number):
 #     print("\nTesting print_square(3):")
 #     print_square(3)
 
-print_multiples(3)
+print(count_down_from(4))
