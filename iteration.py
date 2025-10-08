@@ -10,13 +10,15 @@ def count_up(n):
 # Count backwards - MODIFY this function
 def count_down():
     # TODO: Fix this to count from 5 down to 1
-    for i in range(1, 6):  # This counts up, not down!
+    for i in range(5, 0, -1):  # This counts up, not down!
         print(i)
 
 # MAKE: Print multiples of a number
 def print_multiples(number):
     # TODO: Print the first 5 multiples of 'number'
     # Example: print_multiples(3) should print 3, 6, 9, 12, 15
+    for i in range(1, 6):
+        print(number * i)
     pass
 
 # ==============================================================================
@@ -148,20 +150,22 @@ def print_times_table(number):
 # TEST YOUR FUNCTIONS
 # ==============================================================================
 
-if __name__ == "__main__":
-    print("Testing count_up(3):")
-    count_up(3)
+# if __name__ == "__main__":
+#     print("Testing count_up(3):")
+#     count_up(3)
     
-    print("\nTesting add_up_to_n(4):")
-    result = add_up_to_n(4)
-    print(f"Result: {result}")
+#     print("\nTesting add_up_to_n(4):")
+#     result = add_up_to_n(4)
+#     print(f"Result: {result}")
     
-    print("\nTesting count_evens_up_to(6):")
-    result = count_evens_up_to(6)
-    print(f"Even numbers from 1 to 6: {result}")
+#     print("\nTesting count_evens_up_to(6):")
+#     result = count_evens_up_to(6)
+#     print(f"Even numbers from 1 to 6: {result}")
     
-    print("\nTesting countdown_while(3):")
-    countdown_while(3)
+#     print("\nTesting countdown_while(3):")
+#     countdown_while(3)
     
-    print("\nTesting print_square(3):")
-    print_square(3)
+#     print("\nTesting print_square(3):")
+#     print_square(3)
+
+print_multiples(3)
